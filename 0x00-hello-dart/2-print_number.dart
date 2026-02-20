@@ -1,4 +1,4 @@
 void main() {
-  final int streetNumber = 98;
+  var n = 98;
   print('$streetNumber Battery street\n');
 }
