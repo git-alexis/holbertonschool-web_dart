@@ -1,4 +1,4 @@
 void main() {
-  final double streetNumber = 3.14;
-  print('Double: $streetNumber\n');
+  final double number = (-98.1241412 * 100).round() / 100;
+  print('Double: $number\n');
 }
