@@ -1,4 +1,8 @@
-/ Fichier de test /
+/ Fichiers de test /
 *-main.dart
 
 *-util.dart
+
+/ Fichiers de configuration et dépendances /
+pubspec.lock
+/.dart_tool
