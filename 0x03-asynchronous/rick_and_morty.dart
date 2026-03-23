@@ -3,23 +3,12 @@ import 'dart:convert';
 
 Future<void> printRmCharacters() async {
   try {
-    String url = 'https://rickandmortyapi.com/api/character';
+    final url = Uri.parse('https://rickandmortyapi.com/api/character');
+    final response = await http.get(url);
+    final data = jsonDecode(response.body);
 
-    while (url.isNotEmpty) {
-      final response = await http.get(Uri.parse(url));
-
-      if (response.statusCode != 200) {
-        break;
-        //return;
-      }
-
-      final data = jsonDecode(response.body);
-
-      for (var character in data['results']) {
-        print(character['name']);
-      }
-
-      url = data['info']['next'] ?? "";
+    for (var character in data['results']) {
+      print(character['name']);
     }
   } catch (error) {
     print("error caught: $error");
